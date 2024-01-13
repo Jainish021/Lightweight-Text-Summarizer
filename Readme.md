@@ -1,6 +1,28 @@
+# Text Summarization using Knowledge Distillation
+
+## Overview
+
+This project focuses on creating a smaller, faster student text summarization model by distilling knowledge from a larger pre-trained teacher model (PEGASUS). Key aspects include:
+
+- Using the PEGASUS model as the teacher
+- Creating a smaller student model with fewer parameters
+- Applying knowledge distillation to transfer capabilities of teacher to student
+- Training student model on the CNN/DailyMail dataset
+- Evaluating models using ROUGE metrics
+- Comparing performance and speed of teacher vs student
+
+## Results
+
+- Student model has a size of 1.4 GB and is 2x faster for inference
+- Student model achieves comparable ROUGE scores to the teacher:
+  - Rouge-1: 39.27
+  - Rouge-2: 18.65
+  - Rouge-L: 29.06
+  - RougeLSum: 35.93
+
 ## Installation
 
-All the dependancies are listed in "requirements.txt" file.
+The code is implemented in Python, utilizing Hugging Face's Transformers library and TensorFlow. All the dependancies are listed in "requirements.txt" file.
 
 ## Dataset Download
 Download the dataset from https://www.kaggle.com/datasets/jainishadesara/cnn-dailymail link.
